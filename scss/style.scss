@@ -1,6 +1,5 @@
 body{
     font-family: 'PT Sans', sans-serif;
-    color: #aaa;
 }
 .container{
     max-width: 1200px;
@@ -104,7 +103,8 @@ body{
         max-width: 100%;
         width: 100%;
         height: 100%;
-        padding-top: 100px;
+        padding-top: 35%;
+        
     }
 
     .btn__send-emotion{
@@ -159,6 +159,170 @@ body{
 
 }
 
+
+
+
+//----------------------------------------------
+
+.navBurger {
+    margin-left: auto;
+    cursor: pointer;
+    background: #111;
+    box-sizing: border-box;
+    background-clip: content-box;
+    width: 30px;
+    height: 24px;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    z-index: 100;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        background: #111;
+        height: 2px;
+        width: 100%;
+        right: 0;
+        will-change: rotate;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+    &:before {
+        top: -10px;
+    }
+    &:after {
+        bottom: -10px;
+        width: 90%;
+    }
+    &.active {
+        background: transparent;
+        background-clip: content-box;
+    }
+    &.active:before {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        top: 0;
+        background: #eee;
+        width: 110%;
+    }
+    &.active:after {
+        bottom: 0;
+        -webkit-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+        background: #eee;
+        width: 110%;
+    }
+}
+
+.overlay {
+    position: fixed;
+    background: linear-gradient(180deg, #56A5D3 0%, #1981BD 100%);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform-origin: right top;
+    transform: scale(0);
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    z-index: 100;
+    &.open {
+        opacity: 0.99;
+        visibility: visible;
+        transform: scale(1);
+        
+        li {
+            
+            display: block;
+            animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5)
+                forwards;
+            animation-delay: 0.4s;
+            transform: rotate(-7deg);
+            transform-origin: right bottom;
+            &:nth-of-type(2) {
+                animation-delay: 0.5s;
+            }
+            &:nth-of-type(3) {
+                animation-delay: 0.6s;
+            }
+            &:nth-of-type(4) {
+                animation-delay: 0.7s;
+            }
+            &:nth-of-type(5) {
+                animation-delay: 0.8s;
+            }
+        }
+    }
+}
+
+.overlayMenu {
+    position: absolute;
+    text-align: right;
+    right: 10vw;
+    bottom: 10vw;
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        height: 100%;
+        li {
+            display: block;
+            position: relative;
+            opacity: 0;
+            width: 100%;
+            a {
+                display: inline-block;
+                border: 2px solid rgba(255, 255, 255, 0.09);
+                color: #fff;
+                text-decoration: none;
+                font-size: 30px;
+                padding: 10px 40px 10px 40px;
+                margin: 5px 0;
+                transition: 0.2s;
+                &:hover,
+                &:active,
+                &:focus {
+                    transform: translateX(-2px);
+                    padding-left: 80px;
+                    outline: 1px solid rgba(255, 255, 255, 0.3);
+                    background: rgba(255, 255, 255, 0.03);
+                }
+            }
+        }
+    }
+}
+
+.locked {
+    overflow: hidden;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 50px;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+    }
+}
+
+//----------------------------------------------
+
+
+
+
 //------------------------------------------------------------------------
 
 
@@ -196,6 +360,7 @@ section.main{
     min-width: 100%;
     min-height: 100%;
     // height: 100vh;
+    padding-bottom: 100px;
     background: url('../img/main.jpg') no-repeat top;
     background-size: cover;
    
@@ -230,6 +395,7 @@ section.section-slider{
         h1{
             text-align: center;
             font-size: 50px;
+            font-weight: 700;
         }
         p{
             padding-top: 20px;
@@ -272,6 +438,7 @@ section.emotions{
             font-weight: 700;
         }
     }
+    
     
 }
 
@@ -417,9 +584,6 @@ section.relax_room{
             border: 7px solid #F7638E;
             border-radius: 10px;
         }
-        .wrap-map iframe{
-            
-        }
     }
 }
 
@@ -458,12 +622,6 @@ section.relax_room{
         }
     }
 }
-
-
-
-
-
-
 
 @media (max-width: 990px){
     .container{
@@ -520,156 +678,374 @@ section.relax_room{
 
 
 
-//---------------------------------------
-
-.navBurger {
-    margin-left: auto;
-    cursor: pointer;
-    background: #111;
-    box-sizing: border-box;
-    background-clip: content-box;
-    width: 30px;
-    height: 24px;
-    border-top: 11px solid transparent;
-    border-bottom: 11px solid transparent;
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: all 0.25s ease-in-out;
-    transition: all 0.25s ease-in-out;
-    z-index: 100;
-    &:before,
-    &:after {
-        content: "";
-        position: absolute;
-        background: #111;
-        height: 2px;
-        width: 100%;
-        right: 0;
-        will-change: rotate;
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-        -webkit-transition: all 0.5s ease;
-        transition: all 0.5s ease;
-    }
-    &:before {
-        top: -10px;
-    }
-    &:after {
-        bottom: -10px;
-        width: 90%;
-    }
-    &.active {
-        background: transparent;
-        background-clip: content-box;
-    }
-    &.active:before {
-        -webkit-transform: rotate(135deg);
-        transform: rotate(135deg);
-        top: 0;
-        background: #eee;
-        width: 110%;
-    }
-    &.active:after {
-        bottom: 0;
-        -webkit-transform: rotate(-135deg);
-        transform: rotate(-135deg);
-        background: #eee;
-        width: 110%;
-    }
-}
-
-.overlay {
-    position: fixed;
-    background: linear-gradient(180deg, #56A5D3 0%, #1981BD 100%);
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transform-origin: right top;
-    transform: scale(0);
-    visibility: hidden;
-    transition: all 0.4s ease-in-out;
-    overflow: hidden;
-    z-index: 100;
-    &.open {
-        opacity: 0.99;
-        visibility: visible;
-        transform: scale(1);
-        li {
-            display: block;
-            animation: fadeInRight 0.4s cubic-bezier(0.42, 0.83, 0.7, 1.5)
-                forwards;
-            animation-delay: 0.4s;
-            transform: rotate(-7deg);
-            transform-origin: right bottom;
-            &:nth-of-type(2) {
-                animation-delay: 0.5s;
+//------------------------адаптивность
+@media (max-width: 992px){
+    .main{
+        .content{
+            h1{
+                font-size: 40px !important;
+                // color: rgb(252, 172, 0) !important;
             }
-            &:nth-of-type(3) {
-                animation-delay: 0.6s;
+        }
+        .content_text_footer{
+            display: none !important;
+        }
+    }
+    .destinations{
+        margin-top: 0 !important;
+        font-size: 37px;
+        .content-destinations p{
+            padding-bottom: 40px;
+        }
+    }
+    .section-slider{
+        h1{
+            font-size: 37px !important;
+        }
+    }
+    .emotions{
+        .section-emotions__title{
+            h1{
+                margin: 0;
             }
-            &:nth-of-type(4) {
-                animation-delay: 0.7s;
+        }    
+    }
+    .quest-show{
+        .emotions__content{
+            h2{
+                font-size: 28px !important;
+                font-weight: 700;
             }
-            &:nth-of-type(5) {
-                animation-delay: 0.8s;
+        }
+    }
+    .quest_select{
+        .quest_select__title{
+            h1{
+                font-size: 40px !important;
+            }
+        }
+    }
+    .relax_room{
+        padding-top: 30px !important;
+    }    
+    .best_holidays{
+        .best_holidays_for_kids{
+            h2{
+                font-size: 34px !important;
             }
         }
     }
 }
 
-.overlayMenu {
-    position: absolute;
-    text-align: right;
-    right: 10vw;
-    bottom: 10vw;
-    ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 auto;
-        display: block;
-        position: relative;
-        height: 100%;
-        li {
-            display: block;
-            position: relative;
-            opacity: 0;
-            width: 100%;
-            a {
-                display: inline-block;
-                border: 2px solid rgba(255, 255, 255, 0.09);
-                color: #fff;
-                text-decoration: none;
-                font-size: 30px;
-                padding: 10px 40px 10px 40px;
-                margin: 5px 0;
-                transition: 0.2s;
-                &:hover,
-                &:active,
-                &:focus {
-                    transform: translateX(-2px);
-                    padding-left: 80px;
-                    outline: 1px solid rgba(255, 255, 255, 0.3);
-                    background: rgba(255, 255, 255, 0.03);
+@media (max-width: 767px){
+    .destinations{
+        margin-top: 0 !important;
+        font-size: 37px;
+        .content-destinations p{
+            padding-bottom: 40px;
+        }
+    }
+    .section-slider{
+        h1{
+            font-size: 37px !important;
+        }
+    }
+    .emotions{
+        .section-emotions__title{
+            h1{
+                margin: 0;
+            }
+        }
+
+            .emotions__content{
+                .img__emotion{
+                    padding-top: 40px !important;
+                }
+            }
+          
+    }
+    .quest-show{
+        .emotions__content{
+            h2{
+                font-size: 28px !important;
+                font-weight: 700;
+            }
+           
+            .img__emotion{
+                padding-top: 40px !important;
+            }
+            
+        }
+    }
+    .quest_select{
+        .quest_select__title{
+            h1{
+                font-size: 40px !important;
+            }
+        }
+    }
+    .relax_room{
+        padding-top: 30px !important;
+    }    
+    .best_holidays{
+        padding-top: 40px !important;
+        .best_holidays_for_kids{
+            h2{
+                padding-top: 20px;
+                font-size: 34px !important;
+                
+            }
+        }
+        .best_holidays_items{
+            .item1,.item3{
+                padding-right: 40%;
+            }
+            .item2,.item4{
+                padding-left: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .destinations{
+        margin-top: 0 !important;
+        h1{
+            font-size: 30px !important;
+        }
+        p{
+            font-size: 16px !important;
+        }
+        .content-destinations p{
+            padding-bottom: 40px;
+        }
+    }
+    .section-slider{
+        h1{
+            font-size: 28px !important;
+        }
+        p{
+            font-size: 20px;
+        }
+    }
+    .emotions{
+        .section-emotions__title{
+            h1{
+                margin: 0;
+            }
+        }
+
+            .emotions__content{
+                .img__emotion{
+                    padding-top: 40px !important;
+                }
+            }
+          
+    }
+    .quest-show{
+        .section-quest_title{
+            h1{
+                font-size: 40px !important;
+            }
+        }
+        .emotions__content{
+            h2{
+                font-size: 28px !important;
+                font-weight: 700;
+            }
+           
+            .img__emotion{
+                padding-top: 40px !important;
+            }
+            
+        }
+    }
+    .quest_select{
+        .quest_select__title{
+            h1{
+                font-size: 34px !important;
+            }
+        }
+        .quest_select__content{
+            h2{
+                font-size: 24px !important;
+            }
+        }
+    }
+    .relax_room{
+        padding-top: 30px !important;
+        p{
+            font-size: 24px !important;
+        }
+
+    }    
+    .best_holidays{
+        padding-top: 40px !important;
+        .best_holidays_for_kids{
+            h2{
+                padding-top: 20px;
+                font-size: 34px !important;
+                
+            }
+        }
+        .best_holidays_items{
+            .item1,.item3{
+                padding-right: 40%;
+            }
+            .item2,.item4{
+                padding-left: 40%;
+            }
+        }
+    }
+    .footer{
+        padding-top: 0 !important;
+    }
+}
+
+@media (max-width: 375px){
+    .destinations{
+        margin-top: 0 !important;
+        h1{
+            font-size: 30px !important;
+        }
+        p{
+            font-size: 16px !important;
+        }
+        .content-destinations p{
+            padding-bottom: 40px;
+        }
+    }
+    .section-slider{
+        h1{
+            font-size: 20px !important;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
+    .emotions{
+        .section-emotions__title{
+            h1{
+                margin: 0;
+                font-size: 36px !important;
+            }
+        }
+
+        .emotions__content{
+            h1{
+                font-size: 32px;
+            }
+            .img__emotion{
+                padding-top: 40px !important;
+            }
+        }
+          
+    }
+    .quest-show{
+        .section-quest_title{
+            h1{
+                font-size: 32px !important;
+            }
+        }
+        .emotions__content{
+            h2{
+                font-size: 24px !important;
+                font-weight: 700;
+            }
+           
+            .img__emotion{
+                padding-top: 40px !important;
+            }
+            
+        }
+    }
+    .quest_select{
+        .quest_select__title{
+            h1{
+                font-size: 34px !important;
+            }
+        }
+    }
+    .relax_room{
+        padding-top: 30px !important;
+        h1{
+            font-size: 36px !important;
+        }
+        p{
+            font-size: 24px !important;
+        }
+
+    }    
+    .best_holidays{
+        padding-top: 40px !important;
+        .best_holidays_for_kids{
+            h2{
+                padding-top: 20px;
+                font-size: 28px !important;
+                
+            }
+            p{
+                font-size: 20px !important;
+            }
+        }
+        .best_holidays_items{
+            .item1,.item3{
+                padding-right: 40%;
+            }
+            .item2,.item4{
+                padding-left: 40%;
+            }
+        }
+    }
+    .forms_data{
+        .get-request{
+            padding-top: 100px !important;
+            padding-bottom: 100px !important;
+        }
+        .get-request__form{
+            h3{
+                font-size: 32px !important;
+            }
+        }
+    }
+    .footer{
+        padding-top: 0 !important;
+    }
+
+}
+
+//------------------------------------
+
+@media (max-width: 370px){
+    .overlay{
+        .overlayMenu {
+            ul{
+                li{
+                    a{
+                        font-size: 28px !important;
+                    }
                 }
             }
         }
     }
 }
-
-.locked {
-    overflow: hidden;
-}
-
-@keyframes fadeInRight {
-    0% {
-        opacity: 0;
-        left: 50px;
+@media (max-height: 500px){
+    .overlay{
+        .overlayMenu {
+            ul{
+                li{
+                    a{
+                        font-size: 16px !important;
+                    }
+                }
+            }
+        }
     }
-    100% {
-        opacity: 1;
-        left: 0;
-        transform: rotate(0deg);
+}
+@media (max-width: 319px){
+    .main{
+        .button{
+            display: none;
+        }
     }
 }
