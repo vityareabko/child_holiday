@@ -1,5 +1,6 @@
 body{
     font-family: 'PT Sans', sans-serif;
+    color: #aaa;
 }
 .container{
     max-width: 1200px;
@@ -195,7 +196,7 @@ section.main{
     min-width: 100%;
     min-height: 100%;
     // height: 100vh;
-    background: url(/img/main.jpg) no-repeat top;
+    background: url('..img/main.jpg') no-repeat top;
     background-size: cover;
    
     .content{
@@ -239,7 +240,7 @@ section.section-slider{
 }
 
 section.destinations{
-    background: url(/img/fon1.jpg) no-repeat top;
+    background: url('../img/fon1.jpg') no-repeat top;
     background-size: cover;
     margin-top: 100px;
     padding: 40px 0px;
@@ -256,7 +257,7 @@ section.destinations{
         }
     }
     .bg_destinations{
-        background: url(/img/Vector18.png) no-repeat;
+        background: url('../img/Vector18.png') no-repeat;
         background-size: contain;
         max-width: 100%;
         height: 100%;
@@ -275,7 +276,7 @@ section.emotions{
 }
 
 section.quest-show{
-    background: url(/img/fon_quest.png) no-repeat;
+    background: url('../img/fon_quest.png') no-repeat;
     background-size: cover;
     
     padding-top: 100px;
@@ -302,7 +303,7 @@ section.quest_select{
     }
     .quest_select__content{
         height: 400px;
-        background: url(/img/select_quest.jpg) no-repeat center;
+        background: url('../img/select_quest.jpg') no-repeat center;
         background-size: cover;
         position: relative;
         // display: flex;
@@ -385,7 +386,7 @@ section.relax_room{
 }
 
 .forms_data{
-    background: url(/img/Vector1.jpg) no-repeat top;
+    background: url('../img/Vector1.jpg') no-repeat top;
     background-size: cover;
     .get-request{
         padding-top: 200px;
@@ -423,7 +424,7 @@ section.relax_room{
 }
 
 .footer{
-    background: url(/img/footer.png) no-repeat;
+    background: url('../img/footer.png') no-repeat;
     background-size: cover;
 
     p{
