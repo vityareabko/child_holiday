@@ -28,7 +28,7 @@
 <body>
     <header id="header">
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-lg navbar-light" id="menu">
                 <a class="navbar-brand" href="#">
                     <img class="img-fluid" src="img/logo.png" alt="logotype">
                 </a>
@@ -41,12 +41,12 @@
                 <div class="overlay">
                     <nav class="overlayMenu">  
                         <ul role="menu">
-                            <li><a href="#quest-show" role="menuitem">Важные мелочи</a></li>
-                            <li><a href="#" role="menuitem">Безопасность</a></li>
-                            <li><a href="#" role="menuitem">Наши квесты</a></li>
-                            <li><a href="#" role="menuitem">Квест-шоу</a></li>
-                            <li><a href="#" role="menuitem">Праздники</a></li>
-                            <li><a href="#" role="menuitem">Отзывы</a></li>
+                            <li><a class="menu__item" href="#more_about" role="menuitem">Важные мелочи</a></li>
+                            <li><a class="menu__item" href="#security" role="menuitem">Безопасность</a></li>
+                            <li><a class="menu__item" href="#quests" role="menuitem">Наши квесты</a></li>
+                            <li><a class="menu__item" href="#quest-show" role="menuitem">Квест-шоу</a></li>
+                            <li><a class="menu__item" href="#best_holidais" role="menuitem">Праздники</a></li>
+                            <li><a class="menu__item" href="#reviews" role="menuitem">Отзывы</a></li>
                         </ul>
                 </div>
                 
@@ -96,7 +96,7 @@
         </div>
     </section>
 
-    <section class="section-slider">
+    <section class="section-slider" id="more_about">
         <div class="container">
             <div class="content_carousel">
                 <h1 >Детские квесты и пространства для праздников <br>
@@ -139,7 +139,7 @@
         </div>
     </section>
 
-    <section class="destinations">
+    <section class="destinations" id="security">
         <div class="container">
             <div class="row content-destinations">
                 <div class="col-md-7">
@@ -154,7 +154,7 @@
         </div>
     </section>
 
-    <section class="emotions">
+    <section class="emotions" id="quests">
         <div class="container">
             <div class="section-emotions__title">
                 <h1>Яркие эмоции <br>
@@ -302,6 +302,40 @@
         </div>
     </section>
 
+    <section class="relax-room">
+        <div class="container">
+            <div class="relax-room__title">
+                <h1>В комнате отдыха можно</h1>
+            </div>
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="img/Group111.png" alt="img">
+                    <p>Аниматоры и шоу которых можно пригласить по желанию</p>
+                </div>
+                <div class="item">
+                    <img src="img/Group112.png" alt="img">
+                    <p>Заказать угощения или принести с собой</p>
+                </div>
+                <div class="item">
+                    <img src="img/Group113.png" alt="img">
+                    <p>Повеселиться и поделиться впечатлениями/p>
+                </div>
+                <div class="item">
+                    <img src="img/Group114.png" alt="img">
+                    <p>Поиграть в настольные игры</p>
+                </div>
+                <div class="item">
+                    <img src="img/Group115.png" alt="img">
+                    <p>Пригласить любое количество гостей на свой праздник</p>
+                </div>
+                <div class="item">
+                    <img src="img/Group116.png" alt="img">
+                    <p>Задуть свечи на праздничном торте</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="quest-show" class="quest-show">
         <div class="section-quest_title text-center">
             <h1>квест-шоу</h1>
@@ -351,7 +385,6 @@
         </div>
     </section>
 
-
     <section class="quest_select">
         <div class="container">
             <div class="quest_select__title">
@@ -380,7 +413,41 @@
 
     </section>
     
-    <section class="relax_room">
+    <section class="best_holidays" id="best_holidais">
+        <div class="container">
+            <div class="row best_holidays_for_kids">
+                <div class="col-md-6">
+                    <h2>Лучшие праздники <br>
+                        во Внутри Kids <span>от 6 до 16 лет</span></h2>
+                    <p class="mt-4">Игра закончилась, а праздник продолжается! В квест-комнатах «Внутри Junior» есть залы для чаепития, где дети могут отдохнуть, перекусить и обменяться впечатлениями.</p>
+                </div>
+                <div class="col-md-6 order-first mb-sm-3">
+                    <img class="img-fluid" src="img/best-holy.png" alt="best holiday">
+                </div>
+            </div>
+            <div class="row mt-5 text-center best_holidays_items">
+                <div class="col-md-3 col-sm-12 item1 h-100">
+                    <img class="img-fluid" src="img/best1.png" alt="">
+                    <p>День рождения</p>
+                </div>
+                <div class="col-md-3 col-sm-12 item2 align-self-md-end">
+                    <img class="img-fluid" src="img/best2.png" alt="">
+                    <p>Выпускной или <br>
+                        выезд классом</p>
+                </div>
+                <div class="col-md-3 col-sm-12 item3">
+                    <img class="img-fluid" src="img/best3.png" alt="">
+                    <p>Игра с друзьями</p>
+                </div>
+                <div class="col-md-3 col-sm-12  item4 align-self-md-end">
+                    <img class="img-fluid" src="img/best4.png" alt="">
+                    <p>отдых всей семьей</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="reviews">
         <div class="container">
             <div class="content_carousel">
                 <h1>Отзывы</h1>
@@ -414,39 +481,7 @@
         </div>
     </section>
 
-    <section class="best_holidays">
-        <div class="container">
-            <div class="row best_holidays_for_kids">
-                <div class="col-md-6">
-                    <h2>Лучшие праздники <br>
-                        во Внутри Kids <span>от 6 до 16 лет</span></h2>
-                    <p class="mt-4">Игра закончилась, а праздник продолжается! В квест-комнатах «Внутри Junior» есть залы для чаепития, где дети могут отдохнуть, перекусить и обменяться впечатлениями.</p>
-                </div>
-                <div class="col-md-6 order-first mb-sm-3">
-                    <img class="img-fluid" src="img/best-holy.png" alt="best holiday">
-                </div>
-            </div>
-            <div class="row mt-5 text-center best_holidays_items">
-                <div class="col-md-3 col-sm-12 item1 h-100">
-                    <img class="img-fluid" src="img/best1.png" alt="">
-                    <p>День рождения</p>
-                </div>
-                <div class="col-md-3 col-sm-12 item2 align-self-md-end">
-                    <img class="img-fluid" src="img/best2.png" alt="">
-                    <p>Выпускной или <br>
-                        выезд классом</p>
-                </div>
-                <div class="col-md-3 col-sm-12 item3">
-                    <img class="img-fluid" src="img/best3.png" alt="">
-                    <p>Игра с друзьями</p>
-                </div>
-                <div class="col-md-3 col-sm-12  item4 align-self-md-end">
-                    <img class="img-fluid" src="img/best4.png" alt="">
-                    <p>отдых всей семьей</p>
-                </div>
-            </div>
-        </div>
-    </section>
+ 
 
     <!-- <section class="about">
         <div class="container">

@@ -304,6 +304,17 @@ section.emotions .section-emotions__title h1 {
   font-size: 50px;
   font-weight: 700; }
 
+section.relax-room {
+  padding-top: 100px; }
+  section.relax-room .relax-room__title h1 {
+    font-size: 50px;
+    font-weight: 700; }
+  section.relax-room p {
+    padding-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 700; }
+
 section.quest-show {
   background: url("../img/fon_quest.png") no-repeat;
   background-size: cover;
@@ -349,12 +360,12 @@ section.best_holidays {
   section.best_holidays .best_holidays_items .item1:hover, section.best_holidays .best_holidays_items .item3:hover, section.best_holidays .best_holidays_items .item2:hover, section.best_holidays .best_holidays_items .item4:hover {
     transform: translate(0px, 70px); }
 
-section.relax_room {
+section.reviews {
   padding-top: 100px; }
-  section.relax_room h1 {
+  section.reviews h1 {
     font-size: 50px;
     font-weight: 700; }
-  section.relax_room .content_carousel p {
+  section.reviews .content_carousel p {
     font-size: 18px; }
 
 .about {
@@ -472,10 +483,13 @@ section.relax_room {
     font-size: 28px !important;
     font-weight: 700; }
 
+  .relax-room h1 {
+    font-size: 37px !important; }
+
   .quest_select .quest_select__title h1 {
     font-size: 40px !important; }
 
-  .relax_room {
+  .reviews {
     padding-top: 30px !important; }
 
   .best_holidays .best_holidays_for_kids h2 {
@@ -501,10 +515,13 @@ section.relax_room {
   .quest-show .emotions__content .img__emotion {
     padding-top: 40px !important; }
 
+  .relax-room h1 {
+    font-size: 37px !important; }
+
   .quest_select .quest_select__title h1 {
     font-size: 40px !important; }
 
-  .relax_room {
+  .reviews {
     padding-top: 30px !important; }
 
   .best_holidays {
@@ -549,9 +566,9 @@ section.relax_room {
   .quest_select .quest_select__content h2 {
     font-size: 24px !important; }
 
-  .relax_room {
+  .reviews {
     padding-top: 30px !important; }
-    .relax_room p {
+    .reviews p {
       font-size: 24px !important; }
 
   .best_holidays {
@@ -597,14 +614,19 @@ section.relax_room {
   .quest-show .emotions__content .img__emotion {
     padding-top: 40px !important; }
 
+  .relax-room h1 {
+    font-size: 30px !important; }
+  .relax-room p {
+    font-size: 16px; }
+
   .quest_select .quest_select__title h1 {
     font-size: 34px !important; }
 
-  .relax_room {
+  .reviews {
     padding-top: 30px !important; }
-    .relax_room h1 {
+    .reviews h1 {
       font-size: 36px !important; }
-    .relax_room p {
+    .reviews p {
       font-size: 24px !important; }
 
   .best_holidays {

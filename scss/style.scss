@@ -442,6 +442,23 @@ section.emotions{
     
 }
 
+section.relax-room{
+    padding-top: 100px;
+    
+    .relax-room__title{
+        h1{
+            font-size: 50px;
+            font-weight: 700;
+        }
+    }
+    p{
+        padding-top: 20px;
+        font-size: 18px;
+        text-align: center;
+        font-weight: 700;
+    }
+}
+
 section.quest-show{
     background: url('../img/fon_quest.png') no-repeat;
     background-size: cover;
@@ -516,7 +533,7 @@ section.best_holidays{
     
 }
 
-section.relax_room{
+section.reviews{
     padding-top: 100px;
     h1{
         font-size: 50px;
@@ -718,6 +735,11 @@ section.relax_room{
             }
         }
     }
+    .relax-room{
+        h1{
+            font-size: 37px !important;
+        }
+    }
     .quest_select{
         .quest_select__title{
             h1{
@@ -725,7 +747,7 @@ section.relax_room{
             }
         }
     }
-    .relax_room{
+    .reviews{
         padding-top: 30px !important;
     }    
     .best_holidays{
@@ -777,6 +799,11 @@ section.relax_room{
             
         }
     }
+    .relax-room{
+        h1{
+            font-size: 37px !important;
+        }
+    }
     .quest_select{
         .quest_select__title{
             h1{
@@ -784,7 +811,7 @@ section.relax_room{
             }
         }
     }
-    .relax_room{
+    .reviews{
         padding-top: 30px !important;
     }    
     .best_holidays{
@@ -872,7 +899,7 @@ section.relax_room{
             }
         }
     }
-    .relax_room{
+    .reviews{
         padding-top: 30px !important;
         p{
             font-size: 24px !important;
@@ -959,6 +986,14 @@ section.relax_room{
             
         }
     }
+    .relax-room{
+        h1{
+            font-size: 30px !important;
+        }
+        p{
+            font-size: 16px;
+        }
+    }
     .quest_select{
         .quest_select__title{
             h1{
@@ -966,7 +1001,7 @@ section.relax_room{
             }
         }
     }
-    .relax_room{
+    .reviews{
         padding-top: 30px !important;
         h1{
             font-size: 36px !important;
