@@ -1105,10 +1105,21 @@ section.reviews{
         }
     }
 }
-@media (max-width: 319px){
+@media (max-width: 320px){
     .main{
         .button{
             display: none;
+        }
+    }
+    .overlay{
+        .overlayMenu {
+            ul{
+                li{
+                    a{
+                        font-size: 22px !important;
+                    }
+                }
+            }
         }
     }
 }
@@ -1117,12 +1128,21 @@ section.reviews{
 //-----------------------------------адаптив модального окна
 @media (max-width: 992px){
     .order-holiday-lg{
-        // &__bg{
-        //     padding: 20px;
-        // }
-        // .bg_modals_right{
-        //     display: none;
-        // }
+        .col-right{
+            display: none;
+        }
+        &__content{
+            margin: 0 auto;
+            text-align: center;
+            h1{
+                font-size: 28px;
+            }
+            input{
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        
         
     }
 }

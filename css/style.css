@@ -671,8 +671,22 @@ section.reviews {
 @media (max-height: 500px) {
   .overlay .overlayMenu ul li a {
     font-size: 16px !important; } }
-@media (max-width: 319px) {
+@media (max-width: 320px) {
   .main .button {
-    display: none; } }
+    display: none; }
+
+  .overlay .overlayMenu ul li a {
+    font-size: 22px !important; } }
+@media (max-width: 992px) {
+  .order-holiday-lg .col-right {
+    display: none; }
+  .order-holiday-lg__content {
+    margin: 0 auto;
+    text-align: center; }
+    .order-holiday-lg__content h1 {
+      font-size: 28px; }
+    .order-holiday-lg__content input {
+      display: block;
+      margin: 0 auto; } }
 
 /*# sourceMappingURL=style.css.map */
