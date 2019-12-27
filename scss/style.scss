@@ -1079,32 +1079,34 @@ section.reviews{
 
 //------------------------------------
 
-@media (max-width: 370px){
+@media (max-width: 375px){
     .overlay{
         .overlayMenu {
             ul{
                 li{
                     a{
-                        font-size: 28px !important;
+                        font-size: 20px !important;
                     }
                 }
             }
         }
     }
 }
-@media (max-height: 500px){
-    .overlay{
-        .overlayMenu {
-            ul{
-                li{
-                    a{
-                        font-size: 16px !important;
-                    }
-                }
-            }
-        }
-    }
-}
+
+// @media (max-width: 370px){
+//     .overlay{
+//         .overlayMenu {
+//             ul{
+//                 li{
+//                     a{
+//                         font-size: 28px !important;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
 @media (max-width: 320px){
     .main{
         .button{
@@ -1116,7 +1118,7 @@ section.reviews{
             ul{
                 li{
                     a{
-                        font-size: 22px !important;
+                        font-size: 14px !important;
                     }
                 }
             }
